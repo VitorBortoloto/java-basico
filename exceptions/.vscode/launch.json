@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ProcessoSeletivo2",
+            "request": "launch",
+            "mainClass": "candidatura.ProcessoSeletivo2",
+            "projectName": "exceptions_98a3ff6b"
+        },
+        {
+            "type": "java",
             "name": "ProcessoSeletivo",
             "request": "launch",
             "mainClass": "candidatura.ProcessoSeletivo",
