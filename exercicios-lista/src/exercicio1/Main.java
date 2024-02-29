@@ -13,9 +13,9 @@ public class Main {
 
         receberTemperaturas(listaTemperaturas);
 
-        calcularMedia(listaTemperaturas);  
+        Double media = calcularMedia(listaTemperaturas);  
 
-        exibirTemperaturasAcima(listaTemperaturas, 10d );
+        exibirTemperaturasAcima(listaTemperaturas, media );
         
     }
 
@@ -34,7 +34,7 @@ public class Main {
         System.out.println(lista.size());
     }
 
-    public static void calcularMedia(List<Double> conjunto) {
+    public static Double calcularMedia(List<Double> conjunto) {
 
         Double soma = 0d;
         Double media = 0d;
@@ -46,6 +46,8 @@ public class Main {
         media = soma/conjunto.size();
 
         System.out.println(String.format("A media das temperaturas dos ultimos 6 meses: %.2f", media));
+
+        return media;
 
     }
 
@@ -82,7 +84,7 @@ public class Main {
 
         }        
 
-        System.out.println("As temperaturas acima da media e seu respectivo mes sao: " + temperaturasAcima +", " + mes);  
+        System.out.println("As temperaturas acima da media e seu respectivo mes sao: ");  
         
         for (int i=0; i < temperaturasAcima.size(); i++){
             System.out.println(temperaturasAcima.get(i) + " / " + mes.get(i));
